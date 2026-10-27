@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeskWell AI: Your Personal Desk Wellness Coach</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- ============ LANDING PAGE ============ -->
+  <main id="landing-page">
+    <header class="hero">
+      <h1>DeskWell AI</h1>
+      <p class="tagline">Your Personal Desk Wellness Coach.</p>
+      <p class="hero-text">
+        Long hours at a desk can lead to back, neck and eye strain, often because
+        we don't notice our posture or forget to take breaks. DeskWell AI helps you
+        become aware of how you sit, take regular movement breaks and review your daily activity.
+      </p>
+      <button id="start-btn" class="btn btn-primary">Start Your Wellness Journey</button>
+      <p class="backend-status" id="backend-status">Checking backend...</p>
+    </header>
+
+    <section class="section">
+      <h2>Key Features</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Posture Awareness</h3><p>Webcam-based posture estimates using simple rules, processed on your own computer.</p></div>
+        <div class="card"><h3>Break Reminders</h3><p>Timely nudges to stand up, stretch and rest your eyes.</p></div>
+        <div class="card"><h3>Stretch Guide</h3><p>Simple desk-friendly stretches with clear instructions.</p></div>
+        <div class="card"><h3>Daily Summary</h3><p>Review your sessions, breaks and posture warnings.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Supporting the Sustainable Development Goals</h2>
+      <div class="card-grid two">
+        <div class="card"><h3>SDG 3: Good Health and Well-being</h3>
+          <p>Encourages posture awareness, regular breaks and healthier desk habits. It is a wellness aid, not a medical tool.</p></div>
+        <div class="card"><h3>SDG 10: Reduced Inequalities</h3>
+          <p>Free and open-source, using only a normal webcam and browser, with no paid services or special equipment, so it is easier for more people to access.</p></div>
+      </div>
+    </section>
+
+    <section class="section privacy">
+      <h2>Our Privacy Promise</h2>
+      <p>Your webcam video is processed locally in your browser. It is never uploaded or saved.
+         Only simple session summaries (like duration and break counts) are stored on your own computer.</p>
+    </section>
+
+    <footer class="footer">DeskWell AI · Built for a college hackathon · Not a medical device</footer>
+  </main>
+
+  <!-- ============ DASHBOARD ============ -->
+  <main id="dashboard-page" class="hidden">
+    <header class="dash-header">
+      <h1>Welcome, <span id="nickname">Friend</span>!</h1>
+      <button id="back-btn" class="btn btn-light">Back to Home</button>
+    </header>
+
+    <section class="stat-grid">
+      <div class="stat-card"><span class="stat-label">Posture Status</span><span class="stat-value" id="posture-status">Not monitoring</span></div>
+      <div class="stat-card"><span class="stat-label">Session Timer</span><span class="stat-value" id="session-timer">00:00:00</span></div>
+      <div class="stat-card"><span class="stat-label">Posture Warnings</span><span class="stat-value" id="warning-count">0</span></div>
+      <div class="stat-card"><span class="stat-label">Breaks Completed</span><span class="stat-value" id="break-count">0</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Daily Wellness Goal</h2>
+      <p>Goal: <strong>4 breaks today</strong> (editable in settings later)</p>
+      <div class="progress"><div class="progress-bar" id="progress-bar" style="width: 0%"></div></div>
+      <p class="small" id="progress-text">0 of 4 breaks completed</p>
+    </section>
+
+    <section class="panel">
+      <h2>Monitoring Controls</h2>
+      <div class="controls">
+        <button class="btn btn-primary" id="btn-start">Start Monitoring</button>
+        <button class="btn btn-light" id="btn-pause">Pause Monitoring</button>
+        <button class="btn btn-danger" id="btn-stop">Stop Monitoring</button>
+      </div>
+      <p class="small">These buttons will be connected in the next steps.</p>
+    </section>
+  </main>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
